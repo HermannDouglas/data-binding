@@ -12,6 +12,9 @@ export class DataBindingComponent implements OnInit {
   urlImagem = 'https://picsum.photos/id/237/400';
 
   valorAtual: string = '';
+  valorSalvo: any;
+
+  isMouseOver: boolean = false;
 
   getValor() {
     return 1;
@@ -26,12 +29,15 @@ export class DataBindingComponent implements OnInit {
   }
 
   onKeyUp(evento: KeyboardEvent) {
-    console.log();
     this.valorAtual = (<HTMLInputElement>evento.target).value;
   }
-// Continuar...
-  salvarValor(valor) {
-    
+
+  salvarValor(valor: any) {
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
   constructor() { }
