@@ -1,4 +1,5 @@
-<section>
+<!-- <section> -->
+
     <!-- <article>
         <h3>Interpolation / Interpolação</h3>
         <p>String renderizada com interplação: {{url}} </p>
@@ -11,7 +12,8 @@
         <img src="{{ urlImagem }}">
         <img [src]="urlImagem">
     </article> -->
-    <article>
+
+    <!-- <article>
         <h3>Class e Style Binding</h3>
         <div>
             Selecione uma classe:
@@ -50,6 +52,25 @@
                 Esse texto somente aparece em caso de erro.
             </div>
 
+        </div>
+    </article>
+</section> -->
+
+<section class="event-binding">
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button (click)="botaoClicado()"
+                class="btn btn-primary">
+                    Me clique!
+            </button>
+            <br>
+            <br>
+            <input type="text"
+                (keyup)="onKeyUp($event)"
+                (keyup.enter)="salvarValor($event.target.value)" />
+
+            <p>Valor atual: {{ valorAtual }} </p>
         </div>
     </article>
 </section>
