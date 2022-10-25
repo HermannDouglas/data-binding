@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputPropertyComponent } from './input-property.component';
+import { CicloComponent } from './ciclo.component';
 
-describe('InputPropertyComponent', () => {
-  let component: InputPropertyComponent;
-  let fixture: ComponentFixture<InputPropertyComponent>;
+describe('CicloComponent', () => {
+  let component: CicloComponent;
+  let fixture: ComponentFixture<CicloComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InputPropertyComponent ]
+      declarations: [ CicloComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InputPropertyComponent);
+    fixture = TestBed.createComponent(CicloComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
