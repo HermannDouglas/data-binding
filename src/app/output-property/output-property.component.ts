@@ -12,10 +12,11 @@ export class OutputPropertyComponent implements OnInit {
 
   @Output() mudouValor = new EventEmitter();
 
-  @ViewChild('campoInput', { static: true }) campoValorInput: ElementRef;
+@ViewChild('campoInput') campoValorInput: ElementRef ;
 
   incrementa(){
     //this.valor++;
+    console.log(this.campoValorInput);
     this.campoValorInput.nativeElement.value++;
     this.mudouValor.emit({novoValor: this.valor});
   }
